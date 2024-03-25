@@ -29,7 +29,7 @@ function App() {
 
       setPassword(pass)
     },
-    [length, numberAllow, allowClar, setPassword]
+    [length, numberAllow, allowClar]
 
   )
 
@@ -40,7 +40,7 @@ function App() {
 
   const handleCopy = useCallback(() => {
     passwordRef.current.select();
-    passwordRef.current?.setSelectionRange(0,4)
+    // passwordRef.current?.setSelectionRange(0,4)
       window.navigator.clipboard.writeText(password)
       // passwordRef.current.select();
       // document.execCommand('copy')
